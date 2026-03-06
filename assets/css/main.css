@@ -141,12 +141,12 @@ form {
 }
 
 .Featured-Products .container .Featured-Products-chairs {
-    display: flex;
-    grid-template-columns: repeat(4, 300px);
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
     place-items: center;
     place-self: center;
     padding: 35px;
-    gap: 30px;
+    gap:30px;
 }
 
 .chair {
@@ -225,19 +225,27 @@ form {
 
 .chair:hover .card-icons {
     opacity: 1;
+    transition: 0.3s;
+
 }
 
 .chair:hover .View-Details {
     opacity: 1;
+    transition: 0.5s;
+
 }
 
 .chair:hover .chair-details {
     background-color: #2F1AC4;
     color: #ffff;
+    transition: 0.5s;
+
 }
 
 .chair:hover .chair-details .btn3 {
     background-color: #ffff;
+    transition: 0.5s;
+
 }
 
 @media screen and (min-width:770px) and (max-width:900px) {
