@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 3000px;
+}
+
 a {
     text-decoration: none;
 }
@@ -32,13 +36,14 @@ button {
     margin: auto;
 }
 
-.icon {
+.header .icon {
     margin-left: 30px;
 }
 
 .list ul {
     gap: 30px;
     color: #0D0E43;
+    font-family: lato;
 }
 
 .Home {
@@ -47,7 +52,7 @@ button {
 
 form {
     margin-right: 55px;
-    border: 2px solid rgb(187, 180, 180);
+    border: 2px solid rgb(228, 218, 218);
     border-radius: 3px;
     display: flex;
 }
@@ -69,18 +74,16 @@ form {
     }
 }
 
-.hero .container p {
+.hero .container .left-side .top-paragraph,
+.hero .container .left-side .top2-paragraph {
     color: #FB2E86;
+    font-family: lato;
+    font-style: bold;
 }
 
 .hero .container .left-side .lorem1,
 .hero .container .left-side .lorem2 {
     color: #8A8FB9;
-}
-
-.hero .container .left-side p {
-    font-family: lato;
-    font-style: bold;
 }
 
 .hero .container .left-side h1 {
@@ -125,5 +128,125 @@ form {
 @media screen and (max-width:770px) {
     .hero .container {
         flex-direction: column;
+    }
+}
+
+.title {
+    color: #1A0B5B;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.Featured-Products .container .Featured-Products-chairs {
+    display: flex;
+    grid-template-columns: repeat(4, 300px);
+    place-items: center;
+    place-self: center;
+    padding: 35px;
+    gap:30px;
+}
+
+.chair {
+    background-color: #F6F7FB;
+    width: 250px;
+    box-shadow: 4px 4px 4px 4px rgb(238, 232, 232);
+}
+
+.chair-pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chair-pic .image {
+    background-color: #F6F7FB;
+    width: 65%;
+    height: 200px;
+}
+
+ .Featured-Products .card-icons {
+    background-color: #F6F7FB;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+}
+
+.View-Details {
+    background-color: #08D15F;
+    color: #ffff;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    opacity: 0;
+}
+
+.chair-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #FFFFFF;
+    color: #151875;
+}
+
+.chair-details .chair-name {
+    color: #FB2E86;
+}
+
+.chair-details .btns {
+    display: flex;
+    gap: 5px;
+}
+
+.chair-details .btns .btn {
+    width: 8px;
+    height: 3px;
+    border-radius: 10px;
+}
+
+.btns .btn1 {
+    background-color: #05E6B7;
+}
+
+.btns .btn2 {
+    background-color: #F701A8;
+}
+
+.btns .btn3 {
+    background-color: #00009D;
+}
+
+.chair:hover .card-icons {
+    opacity: 1;
+}
+
+.chair:hover .View-Details {
+    opacity: 1;
+}
+
+.chair:hover .chair-details {
+    background-color: #2F1AC4;
+    color: #ffff;
+}
+
+.chair:hover .chair-details .btn3 {
+    background-color:  #ffff;
+}
+
+@media screen and (min-width:770px) and (max-width:900px) {
+    .Featured-Products .container .Featured-Products-chairs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:770px) {
+    .Featured-Products .container .Featured-Products-chairs {
+        grid-template-columns: 1fr;
+
     }
 }
